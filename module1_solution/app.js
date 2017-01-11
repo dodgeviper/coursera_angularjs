@@ -5,7 +5,7 @@
 (function(){
 
     'use strict';
-    
+
     var module1Solution = angular.module('module1Solution', []);
 
     Module1SolutionController.$inject = ['$scope'];

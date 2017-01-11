@@ -16,19 +16,19 @@
                 $scope.message = 'Please enter data first';
                 return;
             }
-          var items = $scope.itemsEatenForLunch.split(',');
-          items = items.filter(function(item) {
+            var items = $scope.itemsEatenForLunch.split(',');
+            items = items.filter(function(item) {
               if (item.trim().length >= 1 && item != ' ') {
                   return item;
               }
-          });
+            });
 
-          if (items.length <= 3) {
+            if (items.length <= 3) {
               $scope.message = 'Enjoy!';
               return;
-          }
+            }
 
-          $scope.message = 'Too much!'
+            $scope.message = 'Too much!'
 
         };
     };

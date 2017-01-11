@@ -6,6 +6,18 @@
 </head>
 <body>
 <p> Hello World! </p>
+<dialog id="myDialog">
+    <p>Hello How are you?</p>
+</dialog>
 
+<script type="text/javascript">
+    var dialog = document.getElementById('myDialog');
+    dialog.showModal();
+    window.onclick = function(event){
+        if (event.target == dialog) {
+            dialog.close();
+        }
+    }
+</script>
 </body>
 </html>

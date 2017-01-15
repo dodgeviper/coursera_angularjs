@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="serviceApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Services</title>
+    <script src="../angular.min.js"></script>
+    <script src="service.js"></script>
+</head>
+<body>
+<div ng-controller="ServiceController1 as ser1">
+    Item: <input type="text" ng-model="ser1.item"> Quanity <input type="text" ng-model="ser1.quantity">
+    <button ng-click="ser1.addItem(ser1.item, ser1.quantity)">Add</button>
+</div>
+
+<div ng-controller="ServiceController2 as ser2">
+    <ol>
+        <li ng-repeat="item in ser2.items">
+            {{ item }} <button ng-click="ser2.removeItem($index);">Remove</button>
+        </li>
+    </ol>
+</div>
+
+</body>
+</html>

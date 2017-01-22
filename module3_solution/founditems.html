@@ -1,0 +1,7 @@
+<div class="row" ng-repeat="item in found">
+    <span class="col-md-3">{{$index + 1}}. {{ item.name }}</span>
+    <span class="col-md-1">{{ item.short_name }}</span>
+    <span class="col-md-5">{{ item.description }}</span>
+    <span class="col-md-3"><button ng-click="onRemove({index: $index})">Don't want this one!</button></span>
+</div>
+<div ng-transclude></div>

@@ -1,0 +1,32 @@
+<md-card flex>
+    <md-card-header class="idea-header collab-idea-border" ></md-card-header>
+    <md-card-content>
+        <p></p>
+        <p>
+            <div class="container" ng-show="noresult" >
+                <div class="bottom-block">
+                    <span>Looks Like you don't have any Preferences set. Please select some default categories which you would like to see the ideas from. This will help us in customizing your home page and recommend relevant ideas.</span>
+                </div>
+            </div>
+            <fieldset class="demo-fieldset" >
+                <legend class="demo-legend">Your category Preferences </legend>
+                <div layout="row" layout-wrap flex>
+                    <div flex-xs flex="50">
+                        <md-checkbox aria-label="Select All"
+                                     ng-checked="isChecked()"
+                                     md-indeterminate="isIndeterminate()"
+                                     ng-click="toggleAll()">
+                            <span ng-if="isChecked()">Un-</span>Select All
+                        </md-checkbox>
+                    </div>
+                    <div class="demo-select-all-checkboxes" flex="100" ng-repeat="item in categories">
+                        <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+                            {{ item.label }}
+                        </md-checkbox>
+                    </div>
+                </div>
+            </fieldset>
+            <md-button class="md-primary" ng-click="submitPreference()">Save Settings</md-button>
+        </p>
+    </md-card-content>
+</md-card>
